@@ -1,0 +1,8 @@
+[Unit]
+Description=Gnome Autoscale (changes text-scaling based on monitor in use)
+
+[Service]
+ExecStart=bash -c "python ~/.bin/gnomeautoscale.py"
+
+[Install]
+WantedBy=default.target

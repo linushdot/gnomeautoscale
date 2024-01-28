@@ -1,8 +1,0 @@
-[Unit]
-Description=Autoscale (changes text-scaling based on monitor in use)
-
-[Service]
-ExecStart=bash -c "~/.bin/autoscale.sh"
-
-[Install]
-WantedBy=default.target

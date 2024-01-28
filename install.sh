@@ -1,8 +1,8 @@
 #!/bin/bash
 cd "$(dirname "$0")"
 
-install -D -m 755 autoscale.sh ~/.bin/autoscale.sh
-install -D -m 755 autoscale.service ~/.config/systemd/user/autoscale.service
+install -D -m 755 gnomeautoscale.py ~/.bin/gnomeautoscale.py
+install -D -m 755 gnomeautoscale.service ~/.config/systemd/user/gnomeautoscale.service
 
-systemctl --user enable autoscale
-systemctl --user start autoscale
+systemctl --user enable gnomeautoscale
+systemctl --user start gnomeautoscale
