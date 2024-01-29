@@ -8,6 +8,7 @@ status.
 - Built-in display not active: text-scaling-factor 1.0
 
 This behavior can be easily adapted/extended by editing `gnomeautoscale.py`.
+Also, the script and systemd service is only tested under Arch Linux so far.
 
 ## Requirements
 
@@ -44,5 +45,9 @@ systemctl --user stop gnomeautoscale
 systemctl --user start gnomeautoscale
 ...
 ```
+
+When the service fails to start because dbus is not up yet, it will restart
+every 5 seconds until it is successful. This is not optimal and potentially
+could be improved by using systemd dependencies.
 
 [1]: https://wiki.archlinux.org/title/Systemd/User
