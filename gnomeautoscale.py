@@ -42,6 +42,7 @@ class Service:
             setting.set_double('text-scaling-factor', 1.0)
 
     def run(self):
+        self._changed()  # initially check state
         self.proxy.MonitorsChanged.connect(self._changed)
         self.loop.run()
 
